@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Department.css"
+import "./department.css"
 import { FaEye ,FaStethoscope, FaHeartbeat, FaBrain, FaChild, FaTeeth, FaUserMd, FaBone, FaCapsules } from 'react-icons/fa';
 
 function Department() {
