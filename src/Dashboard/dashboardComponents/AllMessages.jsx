@@ -23,9 +23,9 @@ function AllMessages() {
     fetchMessages();
   }, []);
 
-  // if (!isAuthenticated) {
-  //   return <Navigate to={"/admin/login"} />;
-  // }
+  if (!isAuthenticated) {
+    return <Navigate to={"/admin/login"} />;
+  }
   return (
     <section className="page doctors">
       <h1>Messages</h1>

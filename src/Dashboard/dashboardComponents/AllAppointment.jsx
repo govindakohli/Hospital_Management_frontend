@@ -63,9 +63,9 @@ function AllAppointment() {
     }
   };
 
-  // if (!isAuthenticated) {
-  //   return <Navigate to={"/admin/login"} />;
-  // }
+  if (!isAuthenticated) {
+    return <Navigate to={"/admin/login"} />;
+  }
   return (
     <div className="appointments-page">
       <div className="header">
@@ -113,7 +113,7 @@ function AllAppointment() {
           <tbody>
             {appointments && appointments.length > 0 ? (
               appointments.map((appointment, index) => {
-                console.log(appointment);
+                // console.log(appointment);
                 return (
                   <tr key={index}>
                     <td>

@@ -90,9 +90,9 @@ function AddNewDoctor() {
       toast.error(error.response?.data?.message || " Please fill full form" );
     }
   };
-  // if (!isAuthenticated) {
-  //   return <Navigate to={"/admin/login"} />;
-  // }
+  if (!isAuthenticated) {
+    return <Navigate to={"/admin/login"} />;
+  }
 
   return (
     <div className="add-doctor-page">

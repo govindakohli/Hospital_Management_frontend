@@ -55,9 +55,9 @@ function AddNewAdmin() {
       toast.error(error.response?.data?.message || "Registration failed.");
     }
   };
-  // if (!isAuthenticated) {
-  //   return <Navigate to={"/admin/login"} />;
-  // }
+  if (!isAuthenticated) {
+    return <Navigate to={"/admin/login"} />;
+  }
 
   return (
     <div className="add-doctor-page">
@@ -72,7 +72,7 @@ function AddNewAdmin() {
               name="firstName"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
-              required
+              
             />
           </div>
           <div className="form-group">
@@ -83,7 +83,7 @@ function AddNewAdmin() {
               name="lastName"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
-              required
+              
             />
           </div>
         </div>
@@ -96,7 +96,7 @@ function AddNewAdmin() {
               name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              required
+              
             />
           </div>
           <div className="form-group">
@@ -107,7 +107,7 @@ function AddNewAdmin() {
               name="phoneNo"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              required
+              
             />
           </div>
         </div>
@@ -120,7 +120,7 @@ function AddNewAdmin() {
               name="aadharNo"
               value={aadharNumber}
               onChange={(e) => setAadharNumber(e.target.value)}
-              required
+              
             />
           </div>
           <div className="form-group">
@@ -131,7 +131,7 @@ function AddNewAdmin() {
               name="dob"
               value={dob}
               onChange={(e) => setDob(e.target.value)}
-              required
+              
             />
           </div>
         </div>
@@ -143,7 +143,7 @@ function AddNewAdmin() {
               name="gender"
               value={gender}
               onChange={(e) => setGender(e.target.value)}
-              required
+              
             >
               <option value="">Select Gender</option>
               <option value="MALE">Male</option>
@@ -160,7 +160,7 @@ function AddNewAdmin() {
             name="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            required
+            
           />
         </div>
         <button type="submit" className="register-btn">
