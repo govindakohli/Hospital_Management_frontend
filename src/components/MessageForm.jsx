@@ -12,38 +12,29 @@ function MessageForm() {
   const [message, setMessage] = useState("");
 
   // console.log(email);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(
+      const res = await axios.post(
         "https://hospital-management-system-h9yz.onrender.com/api/v1/message/send",
-        {
-          firstName,
-          lastName,
-          email,
-          phone,
-          message,
-        },
+        { firstName, lastName, email, phone, message },
         {
           withCredentials: true,
-          headers: {
-            "Content-Type": "application/json",
-          },
+          headers: { "Content-Type": "application/json" },
         }
-      ).then((res)=>{
-        toast.success(res.data.message);
-        setFirstName("");
-        setLastName("");
-        setEmail("");
-        setPhone("");
-        setMessage("");
-      })
+      );
+  
+      toast.success(res.data.message);
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+      
     } catch (error) {
-      toast.error(error.response.data.message)
+      toast.error(error.response?.data?.message || "Something went wrong");
     }
   };
-
   return (
     <section className="contact-section">
       <div className="contact-container">
