@@ -22,7 +22,7 @@ function loginOption() {
               className="option-btn" 
              
             >
-               Register New Patient
+              New Patient
             </button>
            </Link>
            <Link to="/patient/login"> <button 

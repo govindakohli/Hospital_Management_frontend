@@ -125,7 +125,7 @@ const Register = () => {
             <button type="submit" className="register-btn">Register</button>
           </div>
           <div className="login-link">
-            <p>Already Registered? <Link to="/patient/login">Login Now</Link></p>
+            {/* <p>Already Registered? <Link to="/patient/login">Login Now</Link></p> */}
           </div>
         </form>
       </div>
