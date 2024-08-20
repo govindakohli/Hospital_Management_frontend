@@ -18,6 +18,13 @@ function loginOption() {
           <h2 className="login-options-subheading">Select Login Option</h2>
   
           <div className="options-buttons">
+          <Link to="/patient/register"> <button 
+              className="option-btn" 
+             
+            >
+               Register New Patient
+            </button>
+           </Link>
            <Link to="/patient/login"> <button 
               className="option-btn" 
               onClick={() => handleOptionClick("patient")}
