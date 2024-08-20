@@ -85,8 +85,8 @@ function Login() {
         </form>
         <div className="register-link">
           <p>
-            {/* Don't have an account? <Link to="/patient/register">Register here</Link> */}
-            Don't have an account? <a href="/patient/register">Register here</a>
+            Don't have an account? <Link to="/patient/register">Register here</Link>
+            {/* Don't have an account? <a href="/patient/register">Register here</a> */}
 
           </p>
         </div>
