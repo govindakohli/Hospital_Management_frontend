@@ -6,6 +6,7 @@ import React, { useContext, useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 
 function AddNewDoctor() {
+  const { isAuthenticated, admin } = useContext(Context);
   const [docAvatar, setDocAvatar] = useState("");
   const [doctorAvatarPreview, setDoctorAvatarPreview] = useState("");
   const [firstName, setFirstName] = useState("");
