@@ -10,7 +10,8 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="">
+      <div className="footer">
       <div className="footer-column">
         <h3>About Us</h3>
         <p>
@@ -71,7 +72,10 @@ function Footer() {
             <FaInstagram />
           </a>
         </div>
+        
       </div>
+      </div>
+      <h1 className="owner">Developed By Govinda</h1>
     </footer>
   );
 }
